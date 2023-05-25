@@ -3,13 +3,13 @@ import './carousel.styles.scss';
 class CarouselLeftArrow extends Component {
   render() {
     return (
-      <a
+      <span
         href="#"
         className="carousel__arrow carousel__arrow--left"
         onClick={this.props.onClick}
       >
         <span className="fa fa-2x fa-angle-left" />
-      </a>
+      </span>
     );
   }
 }

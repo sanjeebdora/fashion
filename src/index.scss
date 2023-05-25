@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,13 +11,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Acme', sans-serif;
+  text-transform: uppercase;
 }
 h1 {
   font-size: 38px;
+  font-weight: 900;
 }
 h2 {
   font-size: 32px;
+  font-weight: 900;
 }
 
 .fa-container {

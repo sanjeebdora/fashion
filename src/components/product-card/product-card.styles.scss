@@ -6,7 +6,7 @@
   align-items: center;
   position: relative;
   border-radius: 8px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 24px rgba(86, 178, 6, 0.16);
 
   img {
     width: 100%;
@@ -25,6 +25,7 @@
   }
 
   &:hover {
+    box-shadow: 0 0 0 4px #99d237;
     img {
       opacity: 0.8;
     }
