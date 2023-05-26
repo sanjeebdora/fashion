@@ -80,3 +80,26 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #000;
 }
+
+h1.title {
+  font-size: 72px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* opacity: 0.5; */
+  color: #c9c9c98a;
+  margin-top: 20px;
+  span {
+    color: #febd38;
+    top: -81px;
+    position: relative;
+    font-size: 38px;
+    letter-spacing: 3px;
+  }
+  em {
+    color: #000;
+    font-style: normal;
+  }
+}

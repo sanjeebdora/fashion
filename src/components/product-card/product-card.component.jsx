@@ -22,10 +22,12 @@ const ProductCard = ({ product }) => {
   const addProductToCart = () => dispatch(addItemToCart(cartItems, product));
 
   return (
-    <div className="product-card-container">
-      <img src={imageUrl} alt={`${name}`} />
-      <div className="footer">
-        <span className="name">{name}</span>
+    <div className="product-card-container card">
+      <div className="imgBx">
+        <img src={imageUrl} alt={`${name}`} />
+      </div>
+      <div className="footer details">
+        <h2 className="name">{name}</h2>
         <span className="price">{price}</span>
       </div>
       <Button buttonType="inverted" onClick={addProductToCart}>

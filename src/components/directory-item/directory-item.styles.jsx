@@ -15,7 +15,7 @@ export const Body = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: #90efc7;
   opacity: 0.7;
   position: absolute;
   h2 {
@@ -38,7 +38,7 @@ export const DirectoryItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 4px #99d237;
+  box-shadow: 0 0 0 4px #90efc7;
   margin: 0 7.5px 15px;
   overflow: hidden;
   border-radius: 8px;

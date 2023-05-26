@@ -22,7 +22,9 @@ const Category = () => {
   }, [category, categoriesMap]);
   return (
     <>
-      <h2 className="category-title">{category}</h2>
+      <h1 className="title">
+        Fashion Address <span>{category}</span>
+      </h1>
       {isLoading ? (
         <Spinner />
       ) : (

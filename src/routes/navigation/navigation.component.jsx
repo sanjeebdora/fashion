@@ -19,6 +19,7 @@ import {
   NavLinks,
   NavLink,
 } from './navigation.styles';
+import Footer from '../../components/footer/footer.component';
 
 const Navigation = () => {
   //const { currentUser } = useContext(UserContext);
@@ -47,6 +48,7 @@ const Navigation = () => {
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
       <Outlet />
+      <Footer></Footer>
     </Fragment>
   );
 };

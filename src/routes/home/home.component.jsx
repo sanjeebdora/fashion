@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 import Directory from '../../components/directory/directory.component';
 import Carousel from '../../components/carousel/carousel.component';
+import Footer from '../../components/footer/footer.component';
 
 const Home = () => {
   // Data for carousel

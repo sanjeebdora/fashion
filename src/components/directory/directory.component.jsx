@@ -30,7 +30,8 @@ const categories = [
   {
     id: 5,
     title: 'mens',
-    imageUrl: 'https://i.ibb.co/2hnzQYL/johnny-silverhand-6f.jpg',
+    imageUrl:
+      'https://i.ibb.co/xJf7gPc/julian-alexander-1u5-Nx-JITm0-E-unsplash.jpg',
     route: 'shop/mens',
   },
 ];
