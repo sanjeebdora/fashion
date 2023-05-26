@@ -22,7 +22,7 @@ export const Body = styled.div`
     font-weight: bold;
     margin: 0 6px 0;
     font-size: 22px;
-    color: #4a4a4a;
+    color: #000;
     text-transform: uppercase;
   }
   p {
@@ -41,6 +41,7 @@ export const DirectoryItemContainer = styled.div`
   box-shadow: 0 0 0 4px #99d237;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  border-radius: 8px;
   &:hover {
     cursor: pointer;
     & ${BackgroundImage} {

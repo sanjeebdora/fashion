@@ -1,168 +1,31 @@
 import { Component } from 'react';
 import './carousel.styles.scss';
-class CarouselLeftArrow extends Component {
-  render() {
-    return (
-      <span
-        href="#"
-        className="carousel__arrow carousel__arrow--left"
-        onClick={this.props.onClick}
-      >
-        <span className="fa fa-2x fa-angle-left" />
-      </span>
-    );
-  }
-}
-
-class CarouselRightArrow extends Component {
-  render() {
-    return (
-      <a
-        href="#"
-        className="carousel__arrow carousel__arrow--right"
-        onClick={this.props.onClick}
-      >
-        <span className="fa fa-2x fa-angle-right" />
-      </a>
-    );
-  }
-}
-
-class CarouselIndicator extends Component {
-  render() {
-    return (
-      <li>
-        <a
-          className={
-            this.props.index === this.props.activeIndex
-              ? 'carousel__indicator carousel__indicator--active'
-              : 'carousel__indicator'
-          }
-          onClick={this.props.onClick}
-        />
-      </li>
-    );
-  }
-}
-
-class CarouselSlide extends Component {
-  render() {
-    return (
-      <li
-        className={
-          this.props.index == this.props.activeIndex
-            ? 'carousel__slide carousel__slide--active'
-            : 'carousel__slide'
-        }
-      >
-        <div
-          className="background-image"
-          style={{
-            backgroundImage: `url(${this.props.slide.imageUrl})`,
-          }}
-        ></div>
-        <p className="carousel-slide__content">{this.props.slide.content}</p>
-
-        <p>
-          <strong className="carousel-slide__author">
-            {this.props.slide.author}
-          </strong>
-          ,{' '}
-          <small className="carousel-slide__source">
-            {this.props.slide.source}
-          </small>
-        </p>
-      </li>
-    );
-  }
-}
-
-// Carousel wrapper component
 class Carousel extends Component {
-  constructor(props) {
-    super(props);
-
-    this.goToSlide = this.goToSlide.bind(this);
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
-
-    this.state = {
-      activeIndex: 0,
-    };
-  }
-
-  goToSlide(index) {
-    this.setState({
-      activeIndex: index,
-    });
-  }
-
-  goToPrevSlide(e) {
-    e.preventDefault();
-
-    let index = this.state.activeIndex;
-    let { slides } = this.props;
-    let slidesLength = slides.length;
-
-    if (index < 1) {
-      index = slidesLength;
-    }
-
-    --index;
-
-    this.setState({
-      activeIndex: index,
-    });
-  }
-
-  goToNextSlide(e) {
-    e.preventDefault();
-
-    let index = this.state.activeIndex;
-    let { slides } = this.props;
-    let slidesLength = slides.length - 1;
-
-    if (index === slidesLength) {
-      index = -1;
-    }
-
-    ++index;
-
-    this.setState({
-      activeIndex: index,
-    });
-  }
-
   render() {
     return (
-      <div className="carousel">
-        <CarouselLeftArrow onClick={(e) => this.goToPrevSlide(e)} />
+      <section class="relative bg-[url('https://i.ibb.co/KLp62sN/lonely-814631-1920.jpeg')] bg-cover bg-center bg-no-repeat">
+        <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
-        <ul className="carousel__slides">
-          {this.props.slides.map((slide, index) => (
-            <CarouselSlide
-              key={index}
-              index={index}
-              activeIndex={this.state.activeIndex}
-              slide={slide}
-            />
-          ))}
-        </ul>
+        <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+          <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+            <h1 class="text-3xl font-extrabold sm:text-5xl">
+              Your Fashion
+              <strong class="block font-extrabold text-rose-700">
+                Has a new address.
+              </strong>
+            </h1>
 
-        <CarouselRightArrow onClick={(e) => this.goToNextSlide(e)} />
-
-        <ul className="carousel__indicators">
-          {this.props.slides.map((slide, index) => (
-            <CarouselIndicator
-              key={index}
-              index={index}
-              activeIndex={this.state.activeIndex}
-              isActive={this.state.activeIndex === index}
-              onClick={(e) => this.goToSlide(index)}
-            />
-          ))}
-        </ul>
-      </div>
+            <div class="mt-8 flex flex-wrap gap-4 text-center">
+              <a
+                href="#"
+                class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     );
   }
 }
