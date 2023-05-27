@@ -12,6 +12,7 @@ import {
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
 import './checkout.styles.scss';
+import PaymentForm from '../../components/payment-form/payment-form.component';
 
 const Checkout = () => {
   // const { cartItems, cartTotal } = useContext(CartContext);
@@ -45,6 +46,7 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <div className="total">TOTAL: Rs. {cartTotal}</div>
+      <PaymentForm />
     </div>
   );
 };
