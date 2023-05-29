@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: column;
   width: 380px;
+  margin-top: 0;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 767px) {
+    width: 95%;
+    .buttons-container {
+      width: 100%;
+      button {
+        margin: 15px 0;
+      }
+    }
+  }
 
   h2 {
     margin: 10px 0;
