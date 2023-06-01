@@ -34,14 +34,22 @@ const Navigation = () => {
           <CrwnLogo />
         </LogoContainer>
         <NavLinks>
-          <NavLink to="/shop">SHOP</NavLink>
+          <NavLink to="/shop" className="link link--thebe">
+            SHOP
+          </NavLink>
 
           {currentUser ? (
-            <NavLink as="span" onClick={signOutUser}>
+            <NavLink
+              as="span"
+              className="link link--thebe"
+              onClick={signOutUser}
+            >
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <NavLink to="/auth" className="link link--thebe">
+              SIGN IN
+            </NavLink>
           )}
           <CartIcon />
         </NavLinks>
