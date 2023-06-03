@@ -14,7 +14,7 @@ const DirectoryItem = ({ category }) => {
   };
   return (
     <DirectoryItemContainer onClick={onNavigateHandler}>
-      <BackgroundImage imageUrl={imageUrl} />
+      <BackgroundImage imageUrl={imageUrl} className={`${title} blink-image`} />
       <Body>
         <h2>{title}</h2>
         <p>Shop Now</p>
