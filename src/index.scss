@@ -66,44 +66,19 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  box-shadow: inset 0 0 5px rgb(236, 212, 0);
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #edc400;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #000;
-}
-
-h1.title {
-  font-size: 2.5rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  color: hsl(121.97deg 30.15% 70.02% / 25%);
-  margin-top: 20px;
-  span {
-    color: #000;
-    top: -59px;
-    position: relative;
-    font-size: 38px;
-    letter-spacing: 3px;
-    &::first-letter {
-      color: #edc400;
-    }
-  }
-  em {
-    color: #000;
-    font-style: normal;
-  }
+  background: #edc400;
 }
 
 .link {
@@ -157,11 +132,48 @@ h1.title {
     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
   }
 }
+
+h1.title {
+  font-size: 2.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: hsl(121.97deg 30.15% 70.02% / 25%);
+  margin-top: 20px;
+  span {
+    color: #000;
+    top: -59px;
+    position: relative;
+    font-size: 38px;
+    letter-spacing: 3px;
+    &::first-letter {
+      color: #edc400;
+    }
+  }
+  em {
+    color: #000;
+    font-style: normal;
+  }
+}
+
+h2.title {
+  a.title.link.link--thebe {
+    span {
+      &::first-letter {
+        color: #edc400;
+        display: block;
+      }
+    }
+  }
+}
+
 .text-rose-700 {
-  color: #32d892;
+  color: #edc400;
 }
 .hover\:bg-rose-700:hover {
-  background-color: #32d892 !important;
+  background-color: #edc400 !important;
   color: black;
 }
 

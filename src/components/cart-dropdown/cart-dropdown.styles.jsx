@@ -16,11 +16,11 @@ export const CartDropdownContainer = styled.div`
   top: 90px;
   right: 40px;
   z-index: 5;
-  box-shadow: 0 0 0 2px #000;
+  box-shadow: 0 0 0 2px #ecd400;
   border-radius: 8px;
 
   &:hover {
-    box-shadow: 0 0 0 2px #2b3595;
+    box-shadow: 0 0 0 2px #ecd400;
   }
 
   ${BaseButton},${GoogleSignInButton},${InvertedButton} {
