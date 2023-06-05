@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCartItems } from '../../store/cart/cart.selector';
+import { useNavigate } from 'react-router-dom';
 
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
@@ -20,7 +20,7 @@ const PaymentForm = () => {
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
   const dispatch = useDispatch();
-  const cartItems = useSelector(selectCartItems);
+  const navigate = useNavigate();
 
   const paymentHandler = async (e) => {
     e.preventDefault();
@@ -56,6 +56,7 @@ const PaymentForm = () => {
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
         dispatch(EmptyCart());
+        navigate('/');
         alert('Payment Successful!');
       }
     }
