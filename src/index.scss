@@ -142,6 +142,10 @@ h1.title {
   align-items: center;
   color: hsl(121.97deg 30.15% 70.02% / 25%);
   margin-top: 20px;
+
+  @media (min-width: 992px) {
+    font-size: 4.5rem;
+  }
   span {
     color: #000;
     top: -59px;
