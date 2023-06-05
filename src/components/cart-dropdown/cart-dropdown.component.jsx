@@ -23,33 +23,6 @@ const CartDropdown = () => {
   const dispatch = useDispatch();
   const ref = useRef(null);
 
-  useEffect(() => {
-    const handleClick = (event) => {
-      const element = ref.current;
-      if (
-        (event.target.className.baseVal === 'sc-dicizt kRBiCP shopping-icon' &&
-          isCartOpen) ||
-        event.target.className === element.className ||
-        (event.target &&
-          event.target.parentElement &&
-          event.target.parentElement.className === 'cart-item-container') ||
-        event.target.className === 'item-details' ||
-        event.target.className === 'name' ||
-        event.target.className === 'price'
-      ) {
-        dispatch(setIsCartOpen(true));
-      } else {
-        dispatch(setIsCartOpen(false));
-      }
-    };
-
-    document.addEventListener('click', handleClick);
-
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
-
   const goToCheckoutHandler = () => {
     navigate('/checkout');
     dispatch(setIsCartOpen(!isCartOpen));
