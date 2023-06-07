@@ -14,6 +14,7 @@ import App from './App';
 import { store, persistor } from './store/store';
 
 import './index.scss';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 //const rootElement = document.getElementById('root');
 
@@ -39,3 +40,5 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
