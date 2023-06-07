@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card-container card">
       <div className="imgBx">
-        <img src={imageUrl} alt={`${name}`} />
+        <img src={imageUrl} alt={`${name}`} loading="lazy" />
       </div>
       <div className="footer details">
         <h2 className="name">{name}</h2>
