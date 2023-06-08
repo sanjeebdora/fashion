@@ -9,6 +9,8 @@ import { CartContext } from '../../contexts/cart.context';
 import Button from '../button/button.component';
 
 import './product-card.styles.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;
@@ -24,7 +26,14 @@ const ProductCard = ({ product }) => {
   return (
     <div className="product-card-container card">
       <div className="imgBx">
-        <img src={imageUrl} alt={`${name}`} loading="lazy" />
+        {/* <img src={imageUrl} alt={`${name}`} loading="lazy" /> */}
+        <LazyLoadImage
+          alt={`${name}`}
+          height={`100%`}
+          src={imageUrl} // use normal <img> attributes as props
+          width={`100%`}
+          effect="blur"
+        />
       </div>
       <div className="footer details">
         <h2 className="name">{name}</h2>
