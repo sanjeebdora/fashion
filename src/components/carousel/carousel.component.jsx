@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const Carousel = () => {
   //render() {
   return (
-    <section className="relative bg-[url('https://i.ibb.co/60kyVJ2/hannah-morgan-yc-VFts5-Ma4s-unsplash-1.webp')] bg-cover bg-center bg-no-repeat">
+    <section className="relative bg-[url('https://i.ibb.co/YQwgdL5/jasper-garratt-im0-GJGz-NT5-Y-unsplash.webp')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0  sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
       <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
