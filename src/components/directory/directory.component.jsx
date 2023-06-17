@@ -6,32 +6,33 @@ const categories = [
   {
     id: 1,
     title: 'hats',
-    imageUrl: 'https://i.ibb.co/r4Cnr3c/fashion-2309519-1920.jpg',
+    imageUrl: 'https://i.ibb.co/fkHm1RY/fashion-2309519-1920.webp',
     route: 'shop/hats',
   },
   {
     id: 2,
     title: 'jackets',
-    imageUrl: 'https://i.ibb.co/v4Z8D8Q/willow-hand-2019-ag.jpg',
+    imageUrl:
+      'https://i.ibb.co/JkJNqHJ/cheerful-happy-woman-enjoying-shopping-summer-sale-she-is-carrying-shopping-bags-walking.webp',
     route: 'shop/jackets',
   },
   {
     id: 3,
     title: 'sneakers',
-    imageUrl: 'https://i.ibb.co/KLp62sN/lonely-814631-1920.jpeg',
+    imageUrl: 'https://i.ibb.co/rphXBbT/lonely-814631-1920.webp',
     route: 'shop/sneakers',
   },
   {
     id: 4,
     title: 'womens',
-    imageUrl: 'https://i.ibb.co/jDdPhJ7/classic-girl-with-hat-4k-fx.jpg',
+    imageUrl: 'https://i.ibb.co/2djDmN3/freestocks-3-Q3ts-J01nc-unsplash.webp',
     route: 'shop/womens',
   },
   {
     id: 5,
     title: 'mens',
     imageUrl:
-      'https://i.ibb.co/xJf7gPc/julian-alexander-1u5-Nx-JITm0-E-unsplash.jpg',
+      'https://i.ibb.co/dJ73k6R/julian-alexander-1u5-Nx-JITm0-E-unsplash.webp',
     route: 'shop/mens',
   },
 ];
