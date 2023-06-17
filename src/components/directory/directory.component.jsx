@@ -13,7 +13,7 @@ const categories = [
     id: 2,
     title: 'jackets',
     imageUrl:
-      'https://i.ibb.co/JkJNqHJ/cheerful-happy-woman-enjoying-shopping-summer-sale-she-is-carrying-shopping-bags-walking.webp',
+      'https://i.ibb.co/hRJS9zB/the-nix-company-4-Hmj9gky-M6c-unsplash.jpg',
     route: 'shop/jackets',
   },
   {
