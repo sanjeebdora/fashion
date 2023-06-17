@@ -13,7 +13,7 @@ const categories = [
     id: 2,
     title: 'jackets',
     imageUrl:
-      'https://i.ibb.co/hRJS9zB/the-nix-company-4-Hmj9gky-M6c-unsplash.jpg',
+      'https://i.ibb.co/60kyVJ2/hannah-morgan-yc-VFts5-Ma4s-unsplash-1.webp',
     route: 'shop/jackets',
   },
   {

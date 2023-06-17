@@ -30,7 +30,7 @@ const Navigation = () => {
   return (
     <Fragment>
       <NavigationContainer>
-        <LogoContainer to="/">
+        <LogoContainer to="/" title="Fashion Address">
           <CrwnLogo />
         </LogoContainer>
         <NavLinks>
