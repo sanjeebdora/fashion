@@ -29,26 +29,32 @@ const Checkout = memo(() => {
         <h1 className="title">
           Fashion Address <span>Checkout</span>
         </h1>
-        <div className="checkout-header">
-          <div className="header-block">
-            <span>Product</span>
-          </div>
-          <div className="header-block">
-            <span>Description</span>
-          </div>
-          <div className="header-block">
-            <span>Quantity</span>
-          </div>
-          <div className="header-block">
-            <span>Price</span>
-          </div>
-          <div className="header-block">
-            <span>Remove</span>
-          </div>
-        </div>
-        {cartItems.map((cartItem) => (
-          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-        ))}
+        <table class="table-auto">
+          <thead>
+            <tr className="checkout-header">
+              <th className="header-block">
+                <span>Product</span>
+              </th>
+              <th className="header-block">
+                <span>Description</span>
+              </th>
+              <th className="header-block">
+                <span>Quantity</span>
+              </th>
+              <th className="header-block">
+                <span>Price</span>
+              </th>
+              <th className="header-block">
+                <span>Remove</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {cartItems.map((cartItem) => (
+              <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+            ))}
+          </tbody>
+        </table>
         <div className="total">TOTAL: Rs. {cartTotal}</div>
         <PaymentForm />
       </div>

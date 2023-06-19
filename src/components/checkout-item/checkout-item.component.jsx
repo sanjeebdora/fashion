@@ -35,17 +35,17 @@ const CheckoutItem = ({ cartItem }) => {
     dispatch(removeItemFromCart(cartItems, cartItem));
 
   return (
-    <div className="checkout-item-container">
-      <div className="image-container">
+    <tr className="checkout-item-container">
+      <td className="image-container">
         {/* <img src={imageUrl} alt={`${name}`} loading="lazy" /> */}
         <LazyLoadImage
           alt={`${name}`}
           src={imageUrl} // use normal <img> attributes as props
           effect="blur"
         />
-      </div>
-      <span className="name"> {name} </span>
-      <span className="quantity">
+      </td>
+      <td className="name"> {name} </td>
+      <td className="quantity">
         <div className="arrow" onClick={removeItemHandler}>
           &#10094;
         </div>
@@ -53,12 +53,12 @@ const CheckoutItem = ({ cartItem }) => {
         <div className="arrow" onClick={addItemHandler}>
           &#10095;
         </div>
-      </span>
-      <span className="price"> {price}</span>
-      <div className="remove-button" onClick={clearItemHandler}>
+      </td>
+      <td className="price"> {price}</td>
+      <td className="remove-button" onClick={clearItemHandler}>
         &#10005;
-      </div>
-    </div>
+      </td>
+    </tr>
   );
 };
 

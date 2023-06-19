@@ -1,14 +1,31 @@
 .checkout-container {
-  width: 55%;
+  //width: 55%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  padding: 0 40px;
+
+  table {
+    width: 100%;
+    thead {
+      border-top: 1px solid #000;
+      background-color: #ecd400;
+    }
+
+    td,
+    th {
+      width: 20%;
+      justify-content: center;
+      display: flex;
+    }
+  }
 
   @media (max-width: 767px) {
-    width: 85%;
+    //width: 85%;
     font-size: 12px;
+    padding: 0 20px;
   }
 
   .checkout-header {
@@ -16,21 +33,21 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid #000;
 
     .header-block {
       text-transform: capitalize;
-      width: 23%;
+      //width: 23%;
 
       @media (max-width: 767px) {
         text-align: center;
-        font-size: 13px;
+        font-size: 11px;
       }
 
       &:last-child {
-        width: 8%;
+        // width: 8%;
         @media (max-width: 767px) {
-          width: 23%;
+          //width: 23%;
         }
       }
     }
