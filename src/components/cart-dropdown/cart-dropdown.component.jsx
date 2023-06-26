@@ -24,6 +24,15 @@ const CartDropdown = () => {
   const dispatch = useDispatch();
   const ref = useRef(null);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isCartOpen && ref.current && !ref.current.contains(event.target)) {
+        dispatch(setIsCartOpen(!isCartOpen));
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+  }, [ref]);
+
   const goToCheckoutHandler = useCallback(() => {
     navigate('/checkout');
     dispatch(setIsCartOpen(!isCartOpen));
