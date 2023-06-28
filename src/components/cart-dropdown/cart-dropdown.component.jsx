@@ -26,7 +26,13 @@ const CartDropdown = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isCartOpen && ref.current && !ref.current.contains(event.target)) {
+      const toggleIcon = event.target.classList.contains('shopping-icon');
+      if (
+        isCartOpen &&
+        !toggleIcon &&
+        ref.current &&
+        !ref.current.contains(event.target)
+      ) {
         dispatch(setIsCartOpen(!isCartOpen));
       }
     };

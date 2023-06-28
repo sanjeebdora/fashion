@@ -19,8 +19,11 @@ const CartIcon = () => {
   const isCartOpen = useSelector(selectIsCartOpen);
   const cartCount = useSelector(selectCartCount);
 
-  const toggleIsCartOpen = () => dispatch(setIsCartOpen(!isCartOpen));
-
+  const toggleIsCartOpen = (event) => {
+    event.stopPropagation();
+    return dispatch(setIsCartOpen(!isCartOpen));
+  };
+  console.log(isCartOpen);
   return (
     <CartIconContainer>
       <ShoppingIcon className="shopping-icon" onClick={toggleIsCartOpen} />
