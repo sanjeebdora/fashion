@@ -15,6 +15,7 @@ import {
   EmptyMessage,
   CartItes,
 } from './cart-dropdown.styles.jsx';
+import { disable } from 'workbox-navigation-preload';
 
 const CartDropdown = () => {
   // const { cartItems } = useContext(CartContext);
@@ -52,7 +53,12 @@ const CartDropdown = () => {
           <EmptyMessage>Your Cart Is Empty</EmptyMessage>
         )}
       </CartItes>
-      <Button onClick={goToCheckoutHandler}>ADD TO CART</Button>
+      <Button
+        onClick={goToCheckoutHandler}
+        disabled={!cartItems.length ? 'disabled' : ''}
+      >
+        ADD TO CART
+      </Button>
     </CartDropdownContainer>
   );
 };

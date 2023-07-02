@@ -29,7 +29,7 @@ const Checkout = memo(() => {
         <h1 className="title">
           Fashion Address <span>Checkout</span>
         </h1>
-        <table class="table-auto">
+        <table className="table-auto">
           <thead>
             <tr className="checkout-header">
               <th className="header-block">

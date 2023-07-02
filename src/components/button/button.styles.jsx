@@ -24,6 +24,15 @@ export const BaseButton = styled.button`
     color: black;
     box-shadow: inset 0px 0px 5px 2px rgb(236, 212, 0);
   }
+  &:disabled {
+    background-color: #eee;
+    cursor: default;
+    box-shadow: none;
+    color: #000;
+    &:hover {
+      background-color: #eee;
+    }
+  }
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
