@@ -53,7 +53,13 @@ code {
 
 a {
   text-decoration: none;
-  color: rgb(178, 255, 223);
+  color: rgb(0, 12, 7);
+
+  h3 & {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    font-weight: 700;
+  }
 }
 
 * {
